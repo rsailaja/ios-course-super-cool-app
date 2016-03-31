@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuperCool" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0p-QP-MEe">
+                                <rect key="frame" x="239" y="283" width="135" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QJr-v5-jdJ"/>
+                                    <constraint firstAttribute="width" constant="135" id="u2G-0O-5eH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Hide Blue Bomb"/>
+                                <connections>
+                                    <action selector="hideBlueBomb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dBd-et-kzd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qb-IF-n5p">
+                                <rect key="frame" x="240" y="356" width="132" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3xt-8P-4cO"/>
+                                    <constraint firstAttribute="width" constant="132" id="aCd-95-7eQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Hide Red Bomb">
+                                    <color key="titleColor" red="0.71216299019999996" green="0.0081211514789999995" blue="0.1619059353" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideRedBomb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lsh-HF-Yy6"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bluebomb.png" translatesAutoresizingMaskIntoConstraints="NO" id="iQ1-hV-o0P">
+                                <rect key="frame" x="140" y="54" width="166" height="187"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="redbomb.png" translatesAutoresizingMaskIntoConstraints="NO" id="jFi-Da-l4g">
+                                <rect key="frame" x="372" y="59" width="183" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="PUc-ag-7aT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iQ1-hV-o0P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="94" id="Ev6-tA-osi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jFi-Da-l4g" secondAttribute="trailing" constant="38" id="JRf-91-DhN"/>
+                            <constraint firstItem="iQ1-hV-o0P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="WzP-9Q-Pea"/>
+                            <constraint firstItem="5qb-IF-n5p" firstAttribute="top" secondItem="N0p-QP-MEe" secondAttribute="bottom" constant="43" id="e60-wR-WOp"/>
+                            <constraint firstItem="N0p-QP-MEe" firstAttribute="top" secondItem="jFi-Da-l4g" secondAttribute="bottom" constant="70" id="edM-DY-ewJ"/>
+                            <constraint firstItem="jFi-Da-l4g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="em2-GE-HmM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5qb-IF-n5p" secondAttribute="bottom" constant="214" id="eu3-iv-2lu"/>
+                            <constraint firstItem="N0p-QP-MEe" firstAttribute="top" secondItem="iQ1-hV-o0P" secondAttribute="bottom" constant="48" id="iFr-Hr-hj2"/>
+                            <constraint firstItem="jFi-Da-l4g" firstAttribute="leading" secondItem="iQ1-hV-o0P" secondAttribute="trailing" constant="8" symbolic="YES" id="iPQ-4D-u2C"/>
+                            <constraint firstItem="5qb-IF-n5p" firstAttribute="centerX" secondItem="N0p-QP-MEe" secondAttribute="centerX" id="mtP-PP-n8b"/>
+                            <constraint firstItem="N0p-QP-MEe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="239" id="sRg-L8-jN0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blueBombBtn" destination="N0p-QP-MEe" id="XJ6-nB-mgP"/>
+                        <outlet property="blueBombImg" destination="iQ1-hV-o0P" id="OEB-l6-Gbm"/>
+                        <outlet property="redBombBtn" destination="5qb-IF-n5p" id="Trz-dM-hji"/>
+                        <outlet property="redBombImg" destination="jFi-Da-l4g" id="3Ux-bK-myw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="349"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bluebomb.png" width="567" height="652"/>
+        <image name="redbomb.png" width="207" height="243"/>
+    </resources>
+</document>
